@@ -1,0 +1,7 @@
+package com.user.springbootapp.dao;
+
+public class StoreRepository {
+	
+	
+
+}

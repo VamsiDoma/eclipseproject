@@ -1,0 +1,21 @@
+package com.user.springbootapp.model;
+
+import javax.persistence.Column;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+public class Product {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private Integer productId;
+	@Column(name = "Name")
+	private String productName;
+	@Column(name = "Description")
+	private String productDesc;
+	@Column(name = "Price")
+	private Integer productPrice;
+	
+
+}

@@ -1,0 +1,23 @@
+package com.user.springbootapp.dao;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import com.user.springbootapp.model.Product;
+
+public class StoreRepository {
+	
+	//ADD MORE REPOS HERE
+	Map<Integer, Product> ProductRepo = new HashMap<>();
+	
+	
+	//PRODUCT CRUD OPERATIONS
+	public void CreateProduct(Product product) {
+		
+		Integer productId = ProductRepo.size()+1;
+		ProductRepo.put(productId, product);
+		
+	}
+	
+
+}

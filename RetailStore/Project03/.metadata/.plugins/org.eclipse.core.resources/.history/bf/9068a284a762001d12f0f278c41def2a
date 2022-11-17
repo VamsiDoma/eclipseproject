@@ -1,0 +1,38 @@
+package com.user.springbootapp.controller;
+
+import java.util.Collection;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.user.springbootapp.model.Product;
+import com.user.springbootapp.service.StoreService;
+
+@RestController
+@RequestMapping("/shop")
+public class RetailStore {
+	
+	@Autowired
+	private StoreService storeService;
+	
+	@PostMapping
+	public Product CreateProduct(@RequestBody Product product) {
+		return storeService.CreateProduct(product);
+	}
+	
+	
+	public Collection<Product> GetProducts(){
+		return storeService.GetProducts();
+	}
+	
+
+	@GetMapping
+	public String GetSuccess() {
+		return "Success";
+	}
+	
+}

@@ -1,0 +1,5 @@
+package com.user.springbootapp.controller;
+
+public class RetailStore {
+
+}

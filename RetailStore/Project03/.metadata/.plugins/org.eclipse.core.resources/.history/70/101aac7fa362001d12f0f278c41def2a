@@ -1,0 +1,20 @@
+package com.user.springbootapp.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.user.springbootapp.dao.StoreRepository;
+import com.user.springbootapp.model.Product;
+
+@Service
+public class StoreService {
+	
+	@Autowired
+	private StoreRepository storeRepo;
+	
+	public void CreateProduct(Product product) {
+		storeRepo.CreateProduct(product);
+	}
+	
+
+}

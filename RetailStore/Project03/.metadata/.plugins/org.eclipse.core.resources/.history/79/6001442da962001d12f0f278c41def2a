@@ -1,0 +1,30 @@
+package com.user.springbootapp.service;
+
+import java.util.Collection;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.user.springbootapp.dao.StoreRepository;
+import com.user.springbootapp.model.Product;
+
+@Service
+public class StoreService {
+	
+	@Autowired
+	private StoreRepository storeRepo;
+	
+	public Product CreateProduct(Product product) {
+		return storeRepo.CreateProduct(product);		
+	}
+
+	public Collection<Product> GetProducts() {
+		return storeRepo.GetProducts();
+	}
+
+	public Product EditProductPrice(Integer productId, Double productPrice) {
+		return storeRepo.EditProductPrice(productId, productPrice);
+	}
+	
+
+}

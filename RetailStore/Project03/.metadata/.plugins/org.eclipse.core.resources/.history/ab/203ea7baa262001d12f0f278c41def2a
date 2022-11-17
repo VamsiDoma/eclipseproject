@@ -1,0 +1,22 @@
+package com.user.springbootapp.controller;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping("/shop")
+public class RetailStore {
+	
+	
+	public void CreateProduct() {
+		
+	}
+	
+
+	@GetMapping
+	public String GetSuccess() {
+		return "Success";
+	}
+	
+}
